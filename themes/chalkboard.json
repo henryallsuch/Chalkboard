@@ -211,21 +211,21 @@
       "name": "Numeric",
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#6F59C2"
+        "foreground": "#9B8FE0"
       }
     },
     {
       "name": "Double Quoted",
       "scope": "string.quoted.double",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
       "name": "Single Quoted",
       "scope": "string.quoted.single",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
@@ -379,7 +379,7 @@
       "name": "Html Attribute Value",
       "scope": "text.html.basic string.quoted.double.html",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
@@ -393,7 +393,7 @@
       "name": "Quoted Heredoc",
       "scope": "text.html.basic source.php.embedded string.unquoted.heredoc.php",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
@@ -456,14 +456,14 @@
       "name": "PHP Strings Double-Quoted",
       "scope": "string.quoted.double.php",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
       "name": "PHP Strings Single-Quoted",
       "scope": "string.quoted.single.php",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
@@ -831,7 +831,7 @@
       "name": "JSX: String attribute value",
       "scope": "string.quoted.double.jsx, string.quoted.single.jsx, string.quoted.double.tsx, string.quoted.single.tsx",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
 
@@ -1006,14 +1006,14 @@
       "name": "YAML: String value",
       "scope": "string.unquoted.plain.out.yaml, string.unquoted.block.yaml",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
       "name": "YAML: Quoted string value",
       "scope": "string.quoted.single.yaml, string.quoted.double.yaml",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
@@ -1136,14 +1136,14 @@
       "name": "Shell: String double-quoted",
       "scope": "string.quoted.double.shell",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
       "name": "Shell: String single-quoted",
       "scope": "string.quoted.single.shell",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
@@ -1182,7 +1182,7 @@
       "name": "Dockerfile: String",
       "scope": "string.quoted.double.dockerfile, string.quoted.single.dockerfile",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
 
@@ -1268,14 +1268,14 @@
       "name": "TOML: String value",
       "scope": "string.quoted.double.toml, string.quoted.single.toml",
       "settings": {
-        "foreground": "#C4622D"
+        "foreground": "#E8956D"
       }
     },
     {
       "name": "TOML: Number",
       "scope": "constant.numeric.toml",
       "settings": {
-        "foreground": "#6F59C2"
+        "foreground": "#9B8FE0"
       }
     },
     {
