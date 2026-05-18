@@ -6,24 +6,6 @@ A dark theme built on chalkboard green — calm, readable, and easy on the eyes 
 
 ---
 
-## VS Code Install
-
-**From the Marketplace** *(once published)*:
-Search for `Chalkboard` in the Extensions panel, or:
-```
-ext install henryallsuch.chalkboard
-```
-
-**Manual install from source**:
-1. Clone or [download the zip](https://github.com/henryallsuch/chalkboard/archive/master.zip)
-2. Copy the `Chalkboard` folder into your VS Code extensions directory:
-   - **macOS / Linux**: `~/.vscode/extensions/`
-   - **Windows**: `%USERPROFILE%\.vscode\extensions\`
-3. Restart VS Code
-4. Open Command Palette → `Preferences: Color Theme` → select **Chalkboard**
-
----
-
 ## What's covered
 
 **Languages**: JavaScript, TypeScript, TSX/JSX, PHP, Python, CSS, SCSS, HTML, Markdown, YAML, TOML, Shell/Bash, Dockerfile, Rust, JSON, XML, Regex
@@ -66,24 +48,4 @@ Loosely based on colours available in a real chalk set:
 - Helps reduce reflection on glass screens
 - Similar colours used for similar syntax constructs across languages
 - Limited palette — not too busy
-
----
-
-## Legacy (Sublime Text / TextMate)
-
-The original `Chalkboard.tmTheme` is still included and works in Sublime Text 3/4 and TextMate. VS Code users should use the extension format (`themes/chalkboard.json`).
-
-**Sublime Text install locations:**
-- (macOS) `~/Library/Application Support/Sublime Text/Packages/User`
-- (Windows) `%APPDATA%\Roaming\Sublime Text\Packages\User`
-- (Linux) `~/.config/sublime-text/Packages/User`
-
-**TextMate install location:**
-- (macOS) `/Library/Application Support/TextMate/Themes`
-
----
-
-## Thanks
-
-[P233 for the starting point](http://github.com/P233/Blank-Color-Scheme) · [MattDMo for scope help](https://github.com/MattDMo/Neon-sublime-theme)
 
