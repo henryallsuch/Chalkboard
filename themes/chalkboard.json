@@ -8,7 +8,7 @@
     "foreground": "#e6e1c4",
     "disabledForeground": "#7daf9c",
     "widget.shadow": "#00000060",
-    "selection.background": "#2d7a5380",
+    "selection.background": "#e6e1c435",
     "descriptionForeground": "#7daf9c",
     "errorForeground": "#C4622D",
     "icon.foreground": "#7daf9c",
@@ -18,8 +18,8 @@
     "editor.background": "#0f3326",
     "editor.foreground": "#e6e1c4",
     "editor.lineHighlightBackground": "#1a5540",
-    "editor.selectionBackground": "#2d7a5380",
-    "editor.selectionHighlightBackground": "#2d7a5340",
+    "editor.selectionBackground": "#e6e1c435",
+    "editor.selectionHighlightBackground": "#e6e1c420",
     "editor.wordHighlightBackground": "#0092d125",
     "editor.wordHighlightStrongBackground": "#0092d145",
     "editor.findMatchBackground": "#efcb4360",
@@ -107,7 +107,7 @@
     "terminal.ansiBrightMagenta": "#d4d5ff",
     "terminal.ansiBrightCyan": "#9ad8e4",
     "terminal.ansiBrightWhite": "#e6e1c4",
-    "terminal.selectionBackground": "#2d7a5380",
+    "terminal.selectionBackground": "#e6e1c430",
     "terminalCursor.foreground": "#e6e1c4",
 
     "input.background": "#0f3326",
@@ -281,7 +281,7 @@
       "name": "Method",
       "scope": "meta.method.identifier, meta.method-call, meta.method.declaration",
       "settings": {
-        "foreground": "#13FFA3"
+        "foreground": "#4ECBA8"
       }
     },
     {
@@ -407,7 +407,7 @@
       "name": "PHP PHPdocs",
       "scope": "keyword.other.phpdoc.php",
       "settings": {
-        "foreground": "#3A771F"
+        "foreground": "#7AB648"
       }
     },
     {
@@ -586,7 +586,7 @@
       "name": "SCSS function",
       "scope": "source.scss meta.at-rule keyword.control.at-rule",
       "settings": {
-        "foreground": "#7daf9c"
+        "foreground": "#6DBFAA"
       }
     },
     {
@@ -621,7 +621,7 @@
       "name": "SCSS attribute",
       "scope": "source.scss entity.other.attribute-name.attribute",
       "settings": {
-        "foreground": "#7daf9c"
+        "foreground": "#6DBFAA"
       }
     },
     {
@@ -1304,7 +1304,7 @@
     "struct": "#6FC1D2",
     "typeParameter": "#E0A1FF",
     "function": "#41b644",
-    "method": "#13FFA3",
+    "method": "#4ECBA8",
     "property": "#6c99bb",
     "variable": "#e6e1c4",
     "variable.readonly": { "foreground": "#a5c261" },
