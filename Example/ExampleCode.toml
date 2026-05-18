@@ -1,0 +1,63 @@
+# Cargo.toml — Chalkboard theme TOML example
+# Section headers in yellow, keys in steel blue, values in orange-red
+
+[package]
+name = "chalkboard-api"
+version = "2.0.0"
+edition = "2021"
+authors = ["henryallsuch <henry@example.com>"]
+description = "A Rust API server — Chalkboard theme example"
+license = "MIT"
+repository = "https://github.com/henryallsuch/Chalkboard"
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+strip = true
+codegen-units = 1
+
+[dependencies]
+axum      = { version = "0.7", features = ["tokio", "macros"] }
+tokio     = { version = "1",   features = ["full"] }
+serde     = { version = "1",   features = ["derive"] }
+serde_json = "1"
+tracing   = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+sqlx      = { version = "0.7", features = ["postgres", "runtime-tokio", "macros"] }
+thiserror = "1"
+anyhow    = "1"
+
+[dev-dependencies]
+axum-test  = "14"
+tokio-test = "0.4"
+pretty_assertions = "1"
+
+[features]
+default    = ["postgres"]
+postgres   = ["sqlx/postgres"]
+sqlite     = ["sqlx/sqlite"]
+metrics    = []
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[[bin]]
+name = "migrate"
+path = "src/bin/migrate.rs"
+
+[workspace]
+members = [
+  "crates/core",
+  "crates/auth",
+  "crates/storage",
+]
+
+[workspace.package]
+version = "2.0.0"
+edition = "2021"
+license = "MIT"

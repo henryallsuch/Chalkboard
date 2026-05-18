@@ -1,0 +1,40 @@
+{
+  "name": "chalkboard",
+  "displayName": "Chalkboard",
+  "description": "A green chalkboard-inspired colour theme — easy on the eyes, easy on the soul.",
+  "version": "2.0.0",
+  "publisher": "henryallsuch",
+  "author": "henryallsuch",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "chalkboard",
+    "green",
+    "dark"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henryallsuch/Chalkboard"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Chalkboard",
+        "uiTheme": "vs-dark",
+        "path": "./themes/chalkboard.json"
+      }
+    ]
+  },
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#154734",
+    "theme": "dark"
+  }
+}

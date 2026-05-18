@@ -1,0 +1,103 @@
+# GitHub Actions workflow — deploy on push to main
+# Good example of YAML: keys vs values, anchors, nested structure
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Target environment
+        required: true
+        default: staging
+        type: choice
+        options: [staging, production]
+
+# ── Reusable config via anchors ───────────────────────────────────────────────
+
+x-defaults: &defaults
+  runs-on: ubuntu-latest
+  timeout-minutes: 15
+
+x-node-setup: &node-setup
+  - uses: actions/checkout@v4
+  - uses: actions/setup-node@v4
+    with:
+      node-version: '22'
+      cache: npm
+
+# ── Jobs ──────────────────────────────────────────────────────────────────────
+
+jobs:
+  lint:
+    name: Lint & type-check
+    <<: *defaults
+    steps:
+      - *node-setup
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+
+  test:
+    name: Tests
+    needs: lint
+    <<: *defaults
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22']
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - *node-setup
+      - run: npm ci
+      - run: npm test -- --coverage
+      - uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  build:
+    name: Build
+    needs: test
+    <<: *defaults
+    outputs:
+      image: ${{ steps.meta.outputs.tags }}
+    steps:
+      - *node-setup
+      - run: npm ci && npm run build
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=sha,prefix=sha-
+            type=ref,event=branch
+      - uses: docker/build-push-action@v5
+        with:
+          push: ${{ github.ref == 'refs/heads/main' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    name: Deploy to ${{ inputs.environment || 'staging' }}
+    needs: build
+    <<: *defaults
+    environment:
+      name: ${{ inputs.environment || 'staging' }}
+      url: https://${{ inputs.environment || 'staging' }}.example.com
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Deploy
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          IMAGE: ${{ needs.build.outputs.image }}
+          ENV: ${{ inputs.environment || 'staging' }}
+        run: |
+          echo "Deploying $IMAGE to $ENV"
+          ./scripts/deploy.sh "$ENV" "$IMAGE"

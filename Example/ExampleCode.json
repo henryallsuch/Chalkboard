@@ -1,0 +1,52 @@
+{
+  "name": "chalkboard-api",
+  "version": "2.0.0",
+  "description": "Chalkboard theme — JSON depth colour example",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest run --coverage",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "fastify": "^4.27.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "tsx": "^4.11.0"
+  },
+  "config": {
+    "environments": {
+      "staging": {
+        "database": {
+          "host": "staging-db.internal",
+          "port": 5432,
+          "name": "app_staging",
+          "pool": {
+            "min": 2,
+            "max": 10,
+            "idleTimeoutMillis": 30000
+          }
+        }
+      },
+      "production": {
+        "database": {
+          "host": "prod-db.internal",
+          "port": 5432,
+          "name": "app_production",
+          "pool": {
+            "min": 5,
+            "max": 50,
+            "idleTimeoutMillis": 10000
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,52 +1,90 @@
-# Mou
+# Chalkboard Theme — Markdown Example
 
-![Mou icon](http://mouapp.com/Mou_128.png)
+> This is a blockquote. It renders in sage green italic — easy to scan, clearly secondary.
 
-## Overview
+A paragraph of regular prose. Nothing special, just **bold text** and _italic text_ and even
+**_bold italic together_** to show all three weights working on the cream foreground.
 
-**Mou**, the missing Markdown editor for *web developers*.
+---
 
-### Syntax
+## Headings stand out in yellow
 
-#### Strong and Emphasize 
+### Third level
 
-**strong** or __strong__ ( Cmd + B )
+#### Fourth level
 
-*emphasize* or _emphasize_ ( Cmd + I )
+---
 
-**Sometimes I want a lot of text to be bold.
-Like, seriously, a _LOT_ of text**
+## Code
 
-#### Blockquotes
+Inline `code snippets` use lime green to pop against the background.
 
-> Right angle brackets &gt; are used for block quotes.
+A fenced code block:
 
-#### Links and Email
+```typescript
+async function deploy(env: 'staging' | 'production') {
+  const config = await loadConfig(env)
+  await runMigrations(config.db)
+  console.log(`Deployed to ${env}`)
+}
+```
 
-An email <example@example.com> link.
+Shell example in a code fence:
 
-Simple inline link <http://chenluois.com>, another inline link [Smaller](http://smallerapp.com), one more inline link with title [Resize](http://resizesafari.com "a Safari extension").
+```sh
+#!/usr/bin/env bash
+DEPLOY_ENV=${1:-staging}
+echo "Deploying to $DEPLOY_ENV..."
+npm run build && rsync -avz dist/ user@server:/var/www/app/
+```
 
-A [reference style][id] link. Input id, then anywhere in the doc, define the link with corresponding id:
+---
 
-[id]: http://mouapp.com "Markdown editor on Mac OS X"
+## Lists
 
-Titles ( or called tool tips ) in the links are optional.
+Ordered:
 
-#### Images
+1. Write the feature
+2. Write the tests
+3. Open the PR
+4. Merge when green
 
-An inline image ![Smaller icon](http://smallerapp.com/favicon.ico "Title here"), title is optional.
+Unordered:
 
-A ![Resize icon][2] reference style image.
+- Chalkboard green background
+- Warm cream foreground
+- Chalk-inspired colour palette
+  - Yellow comments
+  - Teal for types and classes
+  - Orange-red for strings
 
-[2]: http://resizesafari.com/favicon.ico "Title"
+---
 
-#### Inline code and Block code
+## Links
 
-Inline code are surround by `backtick` key. To create a block code:
+[GitHub repository](https://github.com/henryallsuch/Chalkboard)  
+An auto-linked URL: <https://github.com/henryallsuch/Chalkboard>
 
-	Indent each line by at least 1 tab, or 4 spaces.
-    var Mou = exactlyTheAppIwant; 
+---
+
+## Tables
+
+| Token type   | Colour     | Hex       |
+|--------------|------------|-----------|
+| Comment      | Yellow     | `#efcb43` |
+| String       | Orange-red | `#C4622D` |
+| Keyword      | Blue       | `#0092d1` |
+| Function     | Green      | `#41b644` |
+| Type / class | Teal       | `#6FC1D2` |
+
+---
+
+## Task list
+
+- [x] Convert to VS Code extension
+- [x] Add workbench colours
+- [ ] Publish to marketplace
+
 
 ####  Ordered Lists
 
