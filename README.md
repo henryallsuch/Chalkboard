@@ -6,6 +6,9 @@ A dark theme built on chalkboard green — calm, readable, and easy on the eyes 
 
 ---
 
+![TS](images/example-ts.png)
+
+
 ## What's covered
 
 **Languages**: JavaScript, TypeScript, TSX/JSX, PHP, Python, CSS, SCSS, HTML, Markdown, YAML, TOML, Shell/Bash, Dockerfile, Rust, JSON, XML, Regex
@@ -48,4 +51,12 @@ Loosely based on colours available in a real chalk set:
 - Helps reduce reflection on glass screens
 - Similar colours used for similar syntax constructs across languages
 - Limited palette — not too busy
+
+## Screenshots
+
+![JS](images/example-js.png)
+
+![JSON](images/example-json.png)
+
+![Markdown](images/example-md.png)
 
