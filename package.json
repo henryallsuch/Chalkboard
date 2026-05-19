@@ -1,10 +1,10 @@
 {
-  "name": "chalkboard",
-  "displayName": "Chalkboard",
+  "name": "chalkboard-vsc",
+  "displayName": "Chalkboard VSC",
   "description": "A green chalkboard-inspired colour theme — easy on the eyes, easy on the soul.",
   "version": "2.0.0",
-  "publisher": "henryallsuch",
-  "author": "henryallsuch",
+  "publisher": "boon-and-moil",
+  "author": "boon-and-moil",
   "license": "MIT",
   "engines": {
     "vscode": "^1.89.0"
