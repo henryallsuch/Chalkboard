@@ -5,8 +5,7 @@
 A dark theme built on chalkboard green — calm, readable, and easy on the eyes in any light. Colour is used deliberately to distinguish language constructs, not just to decorate.
 
 ---
-
-![TS](images/example-ts.png)
+![TS](https://raw.githubusercontent.com/henryallsuch/Chalkboard/53d5e72587cb32b898c4ef61553c779e3cf02518/images/example-ts.png)
 
 
 ## What's covered
@@ -54,9 +53,9 @@ Loosely based on colours available in a real chalk set:
 
 ## Screenshots
 
-![JS](images/example-js.png)
+![JS](https://raw.githubusercontent.com/henryallsuch/Chalkboard/53d5e72587cb32b898c4ef61553c779e3cf02518/images/example-js.png)
 
-![JSON](images/example-json.png)
+![JSON](https://raw.githubusercontent.com/henryallsuch/Chalkboard/53d5e72587cb32b898c4ef61553c779e3cf02518/images/example-json.png)
 
-![Markdown](images/example-md.png)
+![Markdown](https://raw.githubusercontent.com/henryallsuch/Chalkboard/53d5e72587cb32b898c4ef61553c779e3cf02518/images/example-md.png)
 
